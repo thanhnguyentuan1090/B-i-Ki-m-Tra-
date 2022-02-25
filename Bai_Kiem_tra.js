@@ -8,7 +8,7 @@ function findOppositeNumber(n, inputNumber)
 console.log(findOppositeNumber(18,2))
 
 
-function merge2Strings(s1,s2){ 
+function merge2String(s1,s2){ 
     let n = s1.length;
     if(s1.length < s2.length){
       n = s2.length;
@@ -24,17 +24,22 @@ function merge2Strings(s1,s2){
     }
     return string;
   }
-  console.log(merge2Strings('abc','123'));
-  console.log(merge2Strings('abc','0123'));
-  console.log(merge2Strings('abcd','123'));
+  console.log(merge2String('abc','123'));
+  console.log(merge2String('abc','0123'));
+  console.log(merge2String('abcd','123'));
 
  
- var LuckyNumber 
-function LuckyNumber(){
-        LuckyNumber = Math.floor((Math.random() * 10));
-    }
-    LuckyNumber()
-console.log(LuckyNumber);
-document.getElementsByClassName("button")
-document.getElementsByClassName("number")
+const LuckyNumber = Math.floor((Math.random() * 10));
+let a = 0 
+function FindLuckyNumber (){
+  a = a+1
+  let number = document.getElementById("nhapso").value
+  if (number == LuckyNumber && a<=3)
+   {alert("Bạn đã đoán đúng")}
+   else if (number != LuckyNumber && a<=3)
+   {alert("Bạn đã đoán sai")}
+   else {alert("hết lượt chơi ")}
+}
 
+
+document.getElementById("kiemtra").addEventListener("click",FindLuckyNumber)
